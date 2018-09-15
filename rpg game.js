@@ -1,5 +1,5 @@
 var exp = 0;
-var test = 100000;
+var test = 1000;
 var levelcost = 100;
 var level = 1;
 var missingexp = levelcost - exp;
@@ -19,6 +19,10 @@ function xp(){
 			document.getElementById('expcost').innerHTML= missingexp.toFixed(0);
 			document.getElementById('totallvlcost').innerHTML= levelcost.toFixed(0);
 }
+	if (missingexp < 0){
+		missingexp = 0
+		document.getElementById('expcost').innerHTML= missingexp.toFixed(0);
+	}
 }
 
 document.getElementById("lvlup").onclick = levelup;
@@ -45,9 +49,13 @@ if (level == 30){
 					document.getElementById('currentexp').innerHTML= exp.toFixed(0);
 					document.getElementById('totallvlcost').innerHTML= levelcost.toFixed(0);
 					document.getElementById('expcost').innerHTML= missingexp.toFixed(0);
+		if (missingexp < 0){
+			missingexp = 0
+			document.getElementById('expcost').innerHTML= missingexp.toFixed(0);
 }
+}
+		
 			else alert("You don't have enough exp to level up yet.");
 }
-	else alert('You have already reached the highest level,\nWell done!');
 }
 }
