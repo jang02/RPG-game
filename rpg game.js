@@ -55,7 +55,7 @@ if (level == 30){
 }
 }
 		
-			else alert("You don't have enough exp to level up yet.");
+	else alert("You don't have enough exp to level up yet.");
 }
 }
 }
